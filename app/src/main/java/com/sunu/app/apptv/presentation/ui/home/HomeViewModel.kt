@@ -6,6 +6,9 @@ import androidx.lifecycle.ViewModel
 import com.sunu.app.apptv.data.remote.AppTvApi
 import com.sunu.app.apptv.di.RetrofitInstance
 import com.sunu.app.apptv.domain.model.MovieLists
+import com.sunu.app.apptv.domain.model.Movies
+import com.sunu.app.apptv.domain.model.Playinfoid
+import com.sunu.app.apptv.domain.model.Titles
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -36,5 +39,24 @@ class HomeViewModel : ViewModel(){
                 }
             }
         })
+    }
+
+    fun getMoviesTest(tit: String): Boolean{
+        var status = false
+        if (tit.isNotEmpty()) {
+            status = true
+            val title = Titles("", "", "Title")
+            var lisTitle = mutableListOf<Titles>()
+            lisTitle.add(title)
+            val movie = Movies(
+                "djfjf", "3990", "https://imgfull.png", "", "", "", "https://img.png", "",
+                Playinfoid("", "", ""), "my title", "", lisTitle
+            )
+            var movieList = mutableListOf<Movies>()
+            for (i in 0..10) {
+                movieList.add(movie)
+            }
+        }
+        return status
     }
 }
