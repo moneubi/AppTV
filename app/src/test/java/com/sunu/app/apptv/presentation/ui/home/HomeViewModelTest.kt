@@ -17,7 +17,7 @@ class HomeViewModelTest{
     fun `get movies with empty title`() {
         val values = homeViewmodel.getMoviesTest("")
 
-        Truth.assertThat(values)
+        Truth.assertThat(values).isFalse()
     }
 
 }
