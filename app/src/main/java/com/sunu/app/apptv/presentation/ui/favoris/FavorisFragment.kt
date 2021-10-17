@@ -1,4 +1,4 @@
-package com.sunu.app.apptv.presentation.ui.Favoris
+package com.sunu.app.apptv.presentation.ui.favoris
 
 import android.os.Bundle
 import android.view.LayoutInflater

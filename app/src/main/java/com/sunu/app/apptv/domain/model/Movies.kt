@@ -10,7 +10,7 @@ data class Movies(
     val id: String,
     val imageurl: String,
     val lowrightinfo: Any,
-    val playinfoid: PlayInfoId,
+    val playinfoid: Playinfoid,
     val subtitle: String,
     val subtitlefocus: Any,
     val title: List<Titles>
