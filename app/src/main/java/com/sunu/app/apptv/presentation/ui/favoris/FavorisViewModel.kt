@@ -1,4 +1,4 @@
-package com.sunu.app.apptv.presentation.ui.Favoris
+package com.sunu.app.apptv.presentation.ui.favoris
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

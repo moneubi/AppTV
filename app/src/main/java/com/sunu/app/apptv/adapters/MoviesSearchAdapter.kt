@@ -1,6 +1,7 @@
 package com.sunu.app.apptv.adapters
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,7 +10,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.sunu.app.apptv.R
+import com.sunu.app.apptv.activities.DetailMovie
 import com.sunu.app.apptv.common.Constatnts
+import com.sunu.app.apptv.common.Shared
 import com.sunu.app.apptv.domain.model.Movies
 
 class MoviesSearchAdapter(private val context: Context): RecyclerView.Adapter<MoviesSearchAdapter.MyViewHolder>() {
@@ -23,6 +26,13 @@ class MoviesSearchAdapter(private val context: Context): RecyclerView.Adapter<Mo
         //get my movie
         val movie = movieList[position]
         holder.bind(movie,context)
+        /*===================================================================*/
+        //Click action
+        holder.itemView.setOnClickListener {
+            Shared.movie = movie
+            context.startActivity(Intent(context,DetailMovie::class.java))
+        }
+        /*===================================================================*/
     }
 
     override fun getItemCount(): Int {
